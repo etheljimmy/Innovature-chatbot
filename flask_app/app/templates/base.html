@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>INNOVATURE CHATBOX!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #c4c4c4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #chat-container {
+      width: 420px;
+      height: 600px;
+      background-color:lightgoldenrodyellow;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      overflow: auto ;
+    }
+
+    #chat-header {
+      background-color:rgb(9, 14, 61);
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      font-weight:bold ;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    #chat-box {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      margin: 6px 0;
+      display: flex;
+      max-width: 80%;
+    }
+
+    .user {
+      align-self: flex-end;
+      justify-content: flex-end;
+    }
+
+    .bot {
+      align-self: flex-start;
+    }
+
+    .bubble {
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      word-wrap: break-word;
+    }
+
+    .user .bubble {
+      background-color: rgb(9, 14, 61);
+      color: white;
+      border-bottom-right-radius: 0;
+    }
+
+    .bot .bubble {
+      background-color:rgb(168, 202, 223) ;
+      color: black;
+      border-bottom-left-radius: 0;
+    }
+
+    #question-form {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+      border-bottom-left-radius: 10px;
+      outline: none;
+    }
+
+    button {
+      background-color: rgb(4, 7, 36);
+      color: beige;
+      border: none;
+      padding: 0 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .typing .bubble {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat-header">Innovature Chatbox!</div>
+    <div id="chat-box"></div>
+    <form id="question-form">
+      <input type="text" id="question" placeholder="Type a message" required />
+      <button type="submit">▶</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("question-form");
+    const questionInput = document.getElementById("question");
+    const chatBox = document.getElementById("chat-box");
+
+    const sessionId = crypto.randomUUID();
+    let chatHistory = [];
+
+    function renderChat() {
+      chatBox.innerHTML = "";
+      chatHistory.forEach(msg => {
+        const wrapper = document.createElement("div");
+        wrapper.className = `message ${msg.sender}`;
+
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        bubble.innerText = msg.text;
+
+        wrapper.appendChild(bubble);
+        chatBox.appendChild(wrapper);
+      });
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const message = questionInput.value.trim();
+      if (!message) return;
+
+      chatHistory.push({ sender: "user", text: message });
+      renderChat();
+      questionInput.value = "";
+
+      // Typing placeholder
+      const typing = document.createElement("div");
+      typing.className = "message bot typing";
+      typing.innerHTML = `<div class="bubble">Bot is typing...</div>`;
+      chatBox.appendChild(typing);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      try {
+        const response = await fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message, session_id: sessionId })
+        });
+        const data = await response.json();
+        document.querySelector(".typing")?.remove();
+        chatHistory.push({ sender: "bot", text: data.response });
+        renderChat();
+      } catch (error) {
+        document.querySelector(".typing")?.remove();
+        chatHistory.push({ sender: "bot", text: "Bot: Error contacting server." });
+        renderChat();
+      }
+    });
+
+    renderChat();
+  </script>
+</body>
+</html>
