@@ -3,6 +3,8 @@ import Chatbot from './Chatbot';
 
 const HomePage = () => {
   const [showChatbot, setShowChatbot] = useState(false);
+  const [chatHistory, setChatHistory] = useState([]);
+  const [typing, setTyping] = useState(false);
 
   const toggleChatbot = () => {
     setShowChatbot(!showChatbot);
@@ -33,7 +35,7 @@ const HomePage = () => {
       </button>
       {showChatbot && (
         <div style={{ position: 'fixed', bottom: '80px', right: '20px', zIndex: 1000 }}>
-          <Chatbot />
+          <Chatbot chatHistory={chatHistory} setChatHistory={setChatHistory} typing={typing} setTyping={setTyping} />
         </div>
       )}
     </div>

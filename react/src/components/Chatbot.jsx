@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const chatboxStyles = {
   fontFamily: 'Times New Roman, sans-serif',
@@ -79,10 +79,8 @@ const buttonStyles = {
   fontSize: '1rem',
 };
 
-const Chatbot = () => {
-  const [chatHistory, setChatHistory] = useState([]);
-  const [input, setInput] = useState('');
-  const [typing, setTyping] = useState(false);
+const Chatbot = ({ chatHistory, setChatHistory, typing, setTyping }) => {
+  const [input, setInput] = React.useState('');
   const chatEndRef = useRef(null);
 
   useEffect(() => {
