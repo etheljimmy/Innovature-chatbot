@@ -1,5 +1,5 @@
 # app/services/user_service.py
-from flask import jsonify
+from flask import jsonify, current_app
 import requests
 import re
 from rapidfuzz import fuzz
@@ -20,7 +20,10 @@ try:
         website_json = json.load(f)
     website_context = "\n\n".join(website_json.values())
 except Exception as e:
-    print("■ Error loading website_data.json:", e)
+    if 'current_app' in globals():
+        current_app.logger.error(f"Error loading website_data.json: {e}", exc_info=True)
+    else:
+        print("■ Error loading website_data.json:", e)
     website_json = {}
     website_context = ""
 
@@ -30,7 +33,10 @@ try:
     with open(manual_answers_path, 'r', encoding='utf-8') as f:
         manual_answers = json.load(f)
 except Exception as e:
-    print("■ Error loading manual_answers.json:", e)
+    if 'current_app' in globals():
+        current_app.logger.error(f"Error loading manual_answers.json: {e}", exc_info=True)
+    else:
+        print("■ Error loading manual_answers.json:", e)
     manual_answers = {}
 
 # Store conversation history per session
@@ -45,44 +51,45 @@ def process_chat(user_message, session_id):
     def normalize(text):
         return re.sub(r'[^a-z0-9 ]', '', text.lower())
 
-    norm_msg = normalize(user_message)
-    best_key = None
-    best_score = 0
-    for key in manual_answers:
-        score = fuzz.token_set_ratio(norm_msg, normalize(key))
-        if score > best_score:
-            best_score = score
-            best_key = key
+    try:
+        norm_msg = normalize(user_message)
+        best_key = None
+        best_score = 0
+        for key in manual_answers:
+            score = fuzz.token_set_ratio(norm_msg, normalize(key))
+            if score > best_score:
+                best_score = score
+                best_key = key
 
-    if best_score > 85:
-        answer = manual_answers[best_key]
+        if best_score > 85:
+            answer = manual_answers[best_key]
+            session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})
+            session_histories[session_id].append({"role": "assistant", "content": answer})
+            return jsonify({"response": answer})
+
         session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})
-        session_histories[session_id].append({"role": "assistant", "content": answer})
-        return jsonify({"response": answer})
 
-    session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})
+        def find_relevant_context(question, threshold=45, max_total_chars=3000):
+            relevant_sections = []
+            total_chars = 0
+            for section, content in website_json.items():
+                score = fuzz.token_set_ratio(question, content)
+                if score >= threshold:
+                    if total_chars + len(content) > max_total_chars:
+                        content = content[:max_total_chars - total_chars]
+                    relevant_sections.append(content)
+                    total_chars += len(content)
+                    if total_chars >= max_total_chars:
+                        break
+            if not relevant_sections:
+                print("■ No matching context found. Using fallback website context.")
+                return website_context[:max_total_chars]
+            return "\n---\n".join(relevant_sections)
 
-    def find_relevant_context(question, threshold=45, max_total_chars=3000):
-        relevant_sections = []
-        total_chars = 0
-        for section, content in website_json.items():
-            score = fuzz.token_set_ratio(question, content)
-            if score >= threshold:
-                if total_chars + len(content) > max_total_chars:
-                    content = content[:max_total_chars - total_chars]
-                relevant_sections.append(content)
-                total_chars += len(content)
-                if total_chars >= max_total_chars:
-                    break
-        if not relevant_sections:
-            print("■ No matching context found. Using fallback website context.")
-            return website_context[:max_total_chars]
-        return "\n---\n".join(relevant_sections)
+        trimmed_website_context = find_relevant_context(user_message)
 
-    trimmed_website_context = find_relevant_context(user_message)
-
-    recent_history = session_histories[session_id][-2:]
-    prompt = f"""
+        recent_history = session_histories[session_id][-2:]
+        prompt = f"""
 You are a very helpful, official chatbot assistant for the Innovature company website.
 Only answer questions based on the website content below.
 Answer confidently and positively when asked about Innovature.
@@ -115,43 +122,47 @@ WHEN ASKED ABOUT TEAM MEMBERS,ANSWER FROM "The executive team at Innovature incl
 Now answer the following question based on the above context and previous messages if relevant.
 """
 
-    messages = [{"role": "system", "content": prompt}] + recent_history
-    headers = {
-        "Authorization": f"Bearer {TOGETHER_API_KEY}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
-        "messages": messages,
-        "temperature": 0.7,
-        "max_tokens": 300
-    }
+        messages = [{"role": "system", "content": prompt}] + recent_history
+        headers = {
+            "Authorization": f"Bearer {TOGETHER_API_KEY}",
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+            "messages": messages,
+            "temperature": 0.7,
+            "max_tokens": 300
+        }
 
-    if not website_context:
-        print("■ Warning: website_context is empty. Check website_data.json.")
+        if not website_context:
+            print("■ Warning: website_context is empty. Check website_data.json.")
 
-    try:
-        # Add a delay before making the request
-        time.sleep(3)  # Delay for 3 seconds to reduce request frequency
+        try:
+            # Add a delay before making the request
+            time.sleep(3)  # Delay for 3 seconds to reduce request frequency
 
-        while True:
-            resp = requests.post("https://api.together.xyz/v1/chat/completions", json=payload, headers=headers, timeout=30)
-            print("Response Headers:", resp.headers)
+            while True:
+                resp = requests.post("https://api.together.xyz/v1/chat/completions", json=payload, headers=headers, timeout=30)
+                print("Response Headers:", resp.headers)
 
-            if resp.status_code == 200:
-                output = resp.json()["choices"][0]["message"]["content"]
-                break
-            elif resp.status_code == 429:
-                retry_after = int(resp.headers.get("Retry-After", 1))  # Default to 1 second if not provided
-                print(f"Rate limit exceeded. Retrying after {retry_after} seconds...")
-                time.sleep(retry_after)
-            else:
-                print("■ Together API error:", resp.text)
-                output = f"please try again later: {resp.text}"
-                break
+                if resp.status_code == 200:
+                    output = resp.json()["choices"][0]["message"]["content"]
+                    break
+                elif resp.status_code == 429:
+                    retry_after = int(resp.headers.get("Retry-After", 1))  # Default to 1 second if not provided
+                    print(f"Rate limit exceeded. Retrying after {retry_after} seconds...")
+                    time.sleep(retry_after)
+                else:
+                    print("■ Together API error:", resp.text)
+                    output = f"please try again later: {resp.text}"
+                    break
+        except Exception as e:
+            print("■ Exception during Together API call:", e)
+            output = "Sorry, something went wrong while processing your request."
+
+        session_histories[session_id].append({"role": "assistant", "content": output})
+        return jsonify({"response": output})
     except Exception as e:
-        print("■ Exception during Together API call:", e)
-        output = "Sorry, something went wrong while processing your request."
-
-    session_histories[session_id].append({"role": "assistant", "content": output})
-    return jsonify({"response": output})
+        if 'current_app' in globals():
+            current_app.logger.error(f"Exception in process_chat: {e}", exc_info=True)
+        return jsonify({"response": "Internal server error."}), 500
