@@ -3,10 +3,19 @@ import './Chatbot.css';
 import { sendMessageToBot } from '../services/chatbotService';
 
 const Chatbot = () => {
-  const [chatHistory, setChatHistory] = useState([]);
+  const chatEndRef = useRef(null);
+
+  const [chatHistory, setChatHistory] = useState(() => {
+    const saved = sessionStorage.getItem('chatHistory');
+    return saved ? JSON.parse(saved) : [];
+  });
+
   const [typing, setTyping] = useState(false);
   const [input, setInput] = useState('');
-  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+  }, [chatHistory]);
 
   useEffect(() => {
     if (chatEndRef.current) {
@@ -50,7 +59,12 @@ const Chatbot = () => {
         <div ref={chatEndRef} />
       </div>
       <form className="inputArea" onSubmit={handleSubmit}>
-        <input className="inputBox" value={input} onChange={e => setInput(e.target.value)} placeholder="Type a message..." />
+        <input
+          className="inputBox"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          placeholder="Type a message..."
+        />
         <button className="sendButton" type="submit">Send</button>
       </form>
     </div>
