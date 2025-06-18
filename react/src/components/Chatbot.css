@@ -1,0 +1,27 @@
+.chatbox {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 10000;
+  width: 350px;
+  max-width: 95vw;
+  height: 580px;
+  max-height: 90vh;
+  background: #e9f0f7;
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .chatbox {
+    width: 95vw;
+    height: 70vh;
+    bottom: 20px;
+    right: 2.5vw;
+  }
+}

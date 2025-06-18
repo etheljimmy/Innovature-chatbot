@@ -261,3 +261,278 @@
 2025-06-17 01:56:09,049 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
 2025-06-17 01:56:09,734 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
 2025-06-17 01:56:09,737 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:22,734 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:23:25,180 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:25,180 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:25,207 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:26,107 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:23:26,762 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:26,765 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:53,764 INFO: 127.0.0.1 - - [17/Jun/2025 21:23:53] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:53,998 ERROR: Unhandled Exception: process_chat() missing 2 required positional arguments: 'user_message' and 'session_id' [in c:\Innovature-Chatbot\flask_app\app\__init__.py:27]
+Traceback (most recent call last):
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Innovature-Chatbot\flask_app\app\routes\routes.py", line 10, in chat
+    return process_chat()
+TypeError: process_chat() missing 2 required positional arguments: 'user_message' and 'session_id'
+2025-06-17 21:23:54,000 INFO: 127.0.0.1 - - [17/Jun/2025 21:23:54] "[35m[1mPOST /chat HTTP/1.1[0m" 500 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:59,006 INFO: 127.0.0.1 - - [17/Jun/2025 21:23:59] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:23:59,323 ERROR: Unhandled Exception: process_chat() missing 2 required positional arguments: 'user_message' and 'session_id' [in c:\Innovature-Chatbot\flask_app\app\__init__.py:27]
+Traceback (most recent call last):
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Innovature-Chatbot\flask_app\app\routes\routes.py", line 10, in chat
+    return process_chat()
+TypeError: process_chat() missing 2 required positional arguments: 'user_message' and 'session_id'
+2025-06-17 21:23:59,326 INFO: 127.0.0.1 - - [17/Jun/2025 21:23:59] "[35m[1mPOST /chat HTTP/1.1[0m" 500 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:29:03,922 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:29:04,221 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:29:05,333 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:29:06,031 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:29:06,033 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:30:20,685 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:30:20,818 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:30:21,634 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:30:22,272 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:30:22,274 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:22,264 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:31:22,883 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:22,883 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:22,885 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:23,664 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:31:24,271 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:24,274 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:32,530 INFO: 127.0.0.1 - - [17/Jun/2025 21:31:32] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:32,792 ERROR: Unhandled Exception: name 'request' is not defined [in c:\Innovature-Chatbot\flask_app\app\__init__.py:27]
+Traceback (most recent call last):
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Innovature-Chatbot\flask_app\app\routes\routes.py", line 10, in chat
+    return process_chat()
+  File "c:\Innovature-Chatbot\flask_app\app\services\user_service.py", line 55, in process_chat
+    data = request.get_json()
+           ^^^^^^^
+NameError: name 'request' is not defined. Did you mean: 'requests'?
+2025-06-17 21:31:32,811 INFO: 127.0.0.1 - - [17/Jun/2025 21:31:32] "[35m[1mPOST /chat HTTP/1.1[0m" 500 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:31:36,346 ERROR: Unhandled Exception: name 'request' is not defined [in c:\Innovature-Chatbot\flask_app\app\__init__.py:27]
+Traceback (most recent call last):
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Innovature-Chatbot\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Innovature-Chatbot\flask_app\app\routes\routes.py", line 10, in chat
+    return process_chat()
+  File "c:\Innovature-Chatbot\flask_app\app\services\user_service.py", line 55, in process_chat
+    data = request.get_json()
+           ^^^^^^^
+NameError: name 'request' is not defined. Did you mean: 'requests'?
+2025-06-17 21:31:36,348 INFO: 127.0.0.1 - - [17/Jun/2025 21:31:36] "[35m[1mPOST /chat HTTP/1.1[0m" 500 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:32,686 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:32,812 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:33,780 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:32:50,103 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:32:50,787 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:50,787 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:50,789 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:51,840 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:32:52,464 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:32:52,467 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:03,623 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:03] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:07,579 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:07] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:11,951 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:11] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:13,226 ERROR: API error 429: {
+  "id": "nya49dU-3NKUce-9518116d497ba8f9",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot\flask_app\app\services\user_service.py:149]
+2025-06-17 21:33:13,227 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:13] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:21,047 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:21] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:26,361 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:26] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:39,391 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:39] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:39,699 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:39] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:51,542 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:51] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:33:54,083 INFO: 127.0.0.1 - - [17/Jun/2025 21:33:54] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:34:03,174 INFO: 127.0.0.1 - - [17/Jun/2025 21:34:03] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:34:05,391 INFO: 127.0.0.1 - - [17/Jun/2025 21:34:05] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:53,140 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:53,260 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:54,349 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:35:55,021 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:55,025 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:56,142 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:56,267 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:57,200 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:35:57,839 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:35:57,842 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:05,320 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:05,442 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:06,342 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:36:06,989 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:06,992 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:29,942 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:36:30,556 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:30,557 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:30,558 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:31,341 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 21:36:31,942 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:36:31,944 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:38:02,084 INFO: 127.0.0.1 - - [17/Jun/2025 21:38:02] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:38:07,299 INFO: 127.0.0.1 - - [17/Jun/2025 21:38:07] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:38:10,301 INFO: 127.0.0.1 - - [17/Jun/2025 21:38:10] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:38:14,208 ERROR: API error 429: {
+  "id": "nya5h63-4Yz4kd-951818c87a787aff",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot\flask_app\app\services\user_service.py:150]
+2025-06-17 21:38:14,210 INFO: 127.0.0.1 - - [17/Jun/2025 21:38:14] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:40:46,616 INFO: 127.0.0.1 - - [17/Jun/2025 21:40:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:40:54,242 INFO: 127.0.0.1 - - [17/Jun/2025 21:40:54] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:43:57,396 INFO:  * Detected change in 'c:\\Innovature-Chatbot\\flask_app\\app\\services\\user_service.py', reloading [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:43:57,624 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 21:43:58,549 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:07:54,127 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:07:54,812 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:07:54,813 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:07:54,815 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:07:55,881 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:07:56,518 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:07:56,521 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:08:07,654 INFO: 127.0.0.1 - - [17/Jun/2025 22:08:07] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:08:15,517 INFO: 127.0.0.1 - - [17/Jun/2025 22:08:15] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:08:48,855 INFO: 127.0.0.1 - - [17/Jun/2025 22:08:48] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:08:56,679 INFO: 127.0.0.1 - - [17/Jun/2025 22:08:56] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:36,738 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:23:37,392 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:37,392 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:37,396 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:38,288 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:23:38,914 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:38,917 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:53,709 INFO: 127.0.0.1 - - [17/Jun/2025 22:23:53] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:23:57,940 INFO: 127.0.0.1 - - [17/Jun/2025 22:23:57] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:24:46,069 INFO: 127.0.0.1 - - [17/Jun/2025 22:24:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:24:50,877 INFO: 127.0.0.1 - - [17/Jun/2025 22:24:50] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:24:57,547 INFO: 127.0.0.1 - - [17/Jun/2025 22:24:57] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:25:01,976 INFO: 127.0.0.1 - - [17/Jun/2025 22:25:01] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:27:55,627 INFO: 127.0.0.1 - - [17/Jun/2025 22:27:55] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:28:00,186 INFO: 127.0.0.1 - - [17/Jun/2025 22:28:00] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:28:03,505 INFO: 127.0.0.1 - - [17/Jun/2025 22:28:03] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:28:08,093 INFO: 127.0.0.1 - - [17/Jun/2025 22:28:08] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:36,560 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:35:37,223 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:37,223 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:37,226 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:38,126 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:35:38,792 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:38,795 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:46,115 INFO: 127.0.0.1 - - [17/Jun/2025 22:35:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:35:52,968 INFO: 127.0.0.1 - - [17/Jun/2025 22:35:52] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:36:01,270 INFO: 127.0.0.1 - - [17/Jun/2025 22:36:01] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:36:06,530 INFO: 127.0.0.1 - - [17/Jun/2025 22:36:06] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:43:41,780 INFO: 127.0.0.1 - - [17/Jun/2025 22:43:41] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:43:46,438 INFO: 127.0.0.1 - - [17/Jun/2025 22:43:46] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:50:25,088 INFO: 127.0.0.1 - - [17/Jun/2025 22:50:25] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:50:30,432 INFO: 127.0.0.1 - - [17/Jun/2025 22:50:30] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:50:34,257 INFO: 127.0.0.1 - - [17/Jun/2025 22:50:34] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:50:38,742 WARNING: Rate limit hit (429). Retrying once in 2s... [in c:\Innovature-Chatbot\flask_app\app\services\user_service.py:150]
+2025-06-17 22:50:42,471 INFO: 127.0.0.1 - - [17/Jun/2025 22:50:42] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:03,864 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:03] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:09,941 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:09] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:38,856 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:38] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:44,349 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:44] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:44,779 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:44] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:48,478 WARNING: Rate limit hit (429). Retrying once in 2s... [in c:\Innovature-Chatbot\flask_app\app\services\user_service.py:150]
+2025-06-17 22:51:51,042 ERROR: API error after retry 429: {
+  "id": "nyaUL7Q-3NKUce-9518849d2fc78001",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot\flask_app\app\services\user_service.py:156]
+2025-06-17 22:51:51,044 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:51] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:51:55,904 INFO: 127.0.0.1 - - [17/Jun/2025 22:51:55] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:52:01,229 INFO: 127.0.0.1 - - [17/Jun/2025 22:52:01] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:52:12,856 INFO: 127.0.0.1 - - [17/Jun/2025 22:52:12] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:52:21,696 INFO: 127.0.0.1 - - [17/Jun/2025 22:52:21] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:52:33,608 INFO: 127.0.0.1 - - [17/Jun/2025 22:52:33] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:52:40,313 INFO: 127.0.0.1 - - [17/Jun/2025 22:52:40] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:57:26,606 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:57:27,248 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:57:27,249 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:57:27,251 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:57:28,076 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 22:57:28,745 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:57:28,748 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:59:51,525 INFO: 127.0.0.1 - - [17/Jun/2025 22:59:51] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 22:59:56,570 INFO: 127.0.0.1 - - [17/Jun/2025 22:59:56] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:02:33,337 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:02:34,005 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:02:34,006 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:02:34,007 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:02:34,811 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:02:35,431 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:02:35,434 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:08:24,589 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:08:25,263 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:08:25,263 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:08:25,266 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:08:26,165 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:08:26,825 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:08:26,828 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:13,048 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:42:13,678 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:13,679 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:13,680 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:14,491 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:42:15,150 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:15,153 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:40,048 INFO: 127.0.0.1 - - [17/Jun/2025 23:42:40] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:42:44,741 INFO: 127.0.0.1 - - [17/Jun/2025 23:42:44] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:44:46,718 INFO: 127.0.0.1 - - [17/Jun/2025 23:44:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:44:54,861 INFO: 127.0.0.1 - - [17/Jun/2025 23:44:54] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:55:18,228 INFO: Logging is set up. [in C:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:55:18,864 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:55:18,864 INFO: [33mPress CTRL+C to quit[0m [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:55:18,866 INFO:  * Restarting with stat [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:55:19,668 INFO: Logging is set up. [in C:\Innovature-Chatbot\flask_app\config.py:21]
+2025-06-17 23:55:20,302 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-17 23:55:20,304 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-18 00:00:20,774 INFO: 127.0.0.1 - - [18/Jun/2025 00:00:20] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-18 00:00:33,605 INFO: 127.0.0.1 - - [18/Jun/2025 00:00:33] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-18 00:00:35,968 INFO: 127.0.0.1 - - [18/Jun/2025 00:00:35] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-18 00:00:49,275 INFO: 127.0.0.1 - - [18/Jun/2025 00:00:49] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-18 00:01:22,453 INFO: 127.0.0.1 - - [18/Jun/2025 00:01:22] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-18 00:01:32,702 INFO: 127.0.0.1 - - [18/Jun/2025 00:01:32] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]

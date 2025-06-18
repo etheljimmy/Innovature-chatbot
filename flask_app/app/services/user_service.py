@@ -1,5 +1,5 @@
 # app/services/user_service.py
-from flask import jsonify, current_app
+from flask import request,jsonify, current_app
 import requests
 import re
 from rapidfuzz import fuzz
@@ -51,7 +51,10 @@ class UserService:
         # Implement user retrieval logic
         pass
 
-def process_chat(user_message, session_id):
+def process_chat():
+    data = request.get_json()
+    user_message = data.get("message", "").strip()
+    session_id = data.get("session_id", "default")
     def normalize(text):
         return re.sub(r'[^a-z0-9 ]', '', text.lower())
 
@@ -100,7 +103,7 @@ def process_chat(user_message, session_id):
         prompt = f"""
 You are a very helpful, official chatbot assistant for the Innovature company.
 If the user asks about something related to the company and you don't have information, do not make up details.Instead,respond briefly in a way that
-highlights Innovature's excellence(relevant to the question) without fabricating facts.Suggest checking the official
+highlights Innovature\'s excellence(relevant to the question) without fabricating facts.Suggest checking the official
 site ONLY if necessary.
 Only answer questions based on the website content below.
 Greet users warmly, thank them politely, and say goodbye in a friendly way.
@@ -138,43 +141,27 @@ Now answer the following question based on the above context and previous messag
             "max_tokens": 300
         }
 
-        if not website_context:
-            print("■ Warning: website_context is empty. Check website_data.json.")
-
         try:
-            # Add a delay before making the request
-            time.sleep(3)  # Delay for 3 seconds to reduce request frequency
-
-            max_retries = 5
-            retry_count = 0
-            backoff_factor = 2
-
-            while retry_count < max_retries:
-                resp = requests.post("https://api.together.xyz/v1/chat/completions", json=payload, headers=headers, timeout=30)
-                print("Response Headers:", resp.headers)
-
-                if resp.status_code == 200:
-                    output = resp.json()["choices"][0]["message"]["content"]
-                    break
-                elif resp.status_code == 429:
-                    retry_after = int(resp.headers.get("Retry-After", 1))  # Default to 1 second if not provided
-                    print(f"Rate limit exceeded. Retrying after {retry_after} seconds...")
-                    time.sleep(retry_after)
-                elif resp.status_code == 503:
-                    retry_count += 1
-                    wait_time = backoff_factor ** retry_count
-                    print(f"Service unavailable. Retrying in {wait_time} seconds (attempt {retry_count}/{max_retries})...")
-                    time.sleep(wait_time)
+            time.sleep(3) # Rate limiting
+            resp = requests.post("https://api.together.xyz/v1/chat/completions", json=payload, headers=headers, timeout=30)
+            if resp.status_code == 200:
+                output = resp.json()["choices"][0]["message"]["content"]
+            elif resp.status_code == 429:
+                current_app.logger.warning(f"Rate limit hit (429). Retrying once in 2s...")
+                time.sleep(2)  # Retry once after delay
+                retry_resp = requests.post("https://api.together.xyz/v1/chat/completions", json=payload, headers=headers, timeout=30)
+                if retry_resp.status_code == 200:
+                    output = retry_resp.json()["choices"][0]["message"]["content"]
                 else:
-                    print("■ Together API error:", resp.text)
-                    output = f"The service is currently unavailable. Please try again later."
-                    break
+                    current_app.logger.error(f"API error after retry {retry_resp.status_code}: {retry_resp.text}")
+                    output = "Too many requests. Please wait a moment and try again."
             else:
-                print("■ Max retries reached. Unable to process the request.")
-                output = "The service is currently unavailable. Please try again later."
+                current_app.logger.error(f"API error {resp.status_code}: {resp.text}")
+                output = "The chatbot is currently unavailable."
         except Exception as e:
-            print("■ Exception during Together API call:", e)
-            output = "Sorry, something went wrong while processing your request."
+            current_app.logger.error(f"API Exception: {e}", exc_info=True)
+            output = "Sorry, something went wrong."
+
 
         session_histories[session_id].append({"role": "assistant", "content": output})
         return jsonify({"response": output})
