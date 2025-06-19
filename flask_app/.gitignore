@@ -5,3 +5,5 @@ instance/
 *.db
 *.sqlite3
 logs/
+flask_app.log
+*.log
