@@ -2,8 +2,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import json
-
-# Define pages to scrape
 pages = {
     "homepage": "https://innovature.ai/",
     "blogs": "https://innovature.ai/blogs/",
@@ -28,23 +26,33 @@ pages = {
     "industries_ecommerce": "https://innovature.ai/industries/e-commerce/"
 }
 
-# Create folder if not exists
+manual_keys = ["executive_team_manual", "global_contacts_manual"]
+preserved_manual = {}
+
+# Preserve manual sections
+if os.path.exists("website_data.json"):
+    with open("website_data.json", "r", encoding="utf-8") as f:
+        existing_data = json.load(f)
+        for key in manual_keys:
+            if key in existing_data:
+                preserved_manual[key] = existing_data[key]
+
+
 os.makedirs("scraped_pages", exist_ok=True)
 
-# Step 1: Scrape and save raw .txt files
+#  Scrape and save .txt
 for name, url in pages.items():
     try:
         print(f"Scraping {url}")
         res = requests.get(url)
         soup = BeautifulSoup(res.text, 'html.parser')
         text = soup.get_text(separator=' ', strip=True)
-
         with open(f"scraped_pages/{name}.txt", "w", encoding="utf-8") as f:
             f.write(text)
     except Exception as e:
         print(f"Failed to scrape {url}: {e}")
 
-# Step 2: Convert .txt files to structured JSON
+#  Convert txt files to structured JSON
 json_data = {}
 for filename in os.listdir("scraped_pages"):
     if filename.endswith(".txt"):
@@ -52,8 +60,16 @@ for filename in os.listdir("scraped_pages"):
         with open(f"scraped_pages/{filename}", "r", encoding="utf-8") as f:
             json_data[key] = f.read()
 
+#  Preserve existing manual data in website_data.json
+existing_path = "website_data.json"
+if os.path.exists(existing_path):
+    with open(existing_path, "r", encoding="utf-8") as f:
+        existing_data = json.load(f)
+    existing_data.update(json_data)
+    json_data = existing_data
+
 # Save as JSON
 with open("website_data.json", "w", encoding="utf-8") as f:
     json.dump(json_data, f, indent=2, ensure_ascii=False)
 
-print("✅ Scraping complete. Data saved to website_data.json.")
+print(" Scraping complete. Data saved to website_data.json (manual content preserved).")

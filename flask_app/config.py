@@ -8,8 +8,6 @@ class Config:
     LOG_FILE = os.environ.get('LOG_FILE', 'flask_app.log')
     LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
 
-# Logging setup function
-
 def setup_logging(app):
     log_level = getattr(logging, app.config.get('LOG_LEVEL', 'INFO').upper(), logging.INFO)
     logging.basicConfig(

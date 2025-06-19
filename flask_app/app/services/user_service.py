@@ -6,14 +6,12 @@ from rapidfuzz import fuzz
 import os
 import json
 import time
-
-# Load environment variables
 from dotenv import load_dotenv
 load_dotenv()
 
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 
-# Load and combine website content from website_data.json
+# combine content from website.json
 try:
     website_data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../website_data.json'))
     with open(website_data_path, "r", encoding="utf-8") as f:
@@ -27,13 +25,13 @@ except Exception as e:
     website_json = {}
     website_context = ""
 
-# Load manual answers from manual_answers.json
+# manual answers 
 try:
     manual_answers_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../manual_answers.json'))
     with open(manual_answers_path, 'r', encoding='utf-8') as f:
         manual_answers = json.load(f)
 except Exception as e:
-    # Use print as a fallback if current_app is not available
+    # 
     try:
         if 'current_app' in globals() and current_app:
             current_app.logger.error(f"Error loading manual_answers.json: {e}", exc_info=True)
@@ -43,12 +41,12 @@ except Exception as e:
         print(f"Logging failed: {log_exception}")
     manual_answers = {}
 
-# Store conversation history per session
+#conversation history per session
 session_histories = {}
 
 class UserService:
     def get_user(self, user_id):
-        # Implement user retrieval logic
+        # I
         pass
 
 def process_chat():
@@ -59,7 +57,7 @@ def process_chat():
         return re.sub(r'[^a-z0-9 ]', '', text.lower())
 
     try:
-        # Re-added manual answers logic
+        # Re-added manual 
         try:
             norm_msg = normalize(user_message)
             best_key = None
