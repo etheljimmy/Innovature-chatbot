@@ -5,6 +5,37 @@ import { sendMessageToBot } from '../services/chatbotService';
 const Chatbot = () => {
   const chatEndRef = useRef(null);
 
+  //  Cookie helpers
+  function getCookie(name) {
+    const cookieArr = document.cookie.split('; ');
+    for (const cookie of cookieArr) {
+      const [key, value] = cookie.split('=');
+      if (key === name) return value;
+    }
+    return null;
+  }
+
+  function setCookie(name, value, days = 7) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+  }
+
+  function generateSessionId() {
+    return 'session-' + Math.random().toString(36).substring(2, 15);
+  }
+
+  //  Session ID via cookie
+  const [sessionId, setSessionId] = useState('');
+
+  useEffect(() => {
+    let sid = getCookie('chat_session_id');
+    if (!sid) {
+      sid = generateSessionId();
+      setCookie('chat_session_id', sid, 7);
+    }
+    setSessionId(sid);
+  }, []);
+
   const [chatHistory, setChatHistory] = useState(() => {
     const saved = sessionStorage.getItem('chatHistory');
     return saved ? JSON.parse(saved) : [];
@@ -37,7 +68,7 @@ const Chatbot = () => {
       const data = await sendMessageToBot(message, newHistory.map(msg => ({
         role: msg.sender === 'user' ? 'user' : 'assistant',
         content: msg.text
-      })));
+      })), sessionId); // pass sessionId
       setChatHistory(h => [...h, { sender: 'bot', text: data.response }]);
     } catch (error) {
       setChatHistory(h => [...h, { sender: 'bot', text: 'Bot error: could not contact server.' }]);
