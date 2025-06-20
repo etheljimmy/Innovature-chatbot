@@ -1,16 +1,15 @@
 from flask import request, jsonify, current_app
 import requests
-import re
 import os
 import json
 import time
 from dotenv import load_dotenv
-
-# Load environment variables
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 load_dotenv()
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 
-# Load website data
+#websitedata
 try:
     website_data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../website_data.json'))
     with open(website_data_path, "r", encoding="utf-8") as f:
@@ -24,7 +23,7 @@ except Exception as e:
     website_json = {}
     website_context = ""
 
-# Load manual answers
+# manual
 try:
     manual_answers_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../manual_answers.json'))
     with open(manual_answers_path, 'r', encoding='utf-8') as f:
@@ -39,7 +38,7 @@ except Exception as e:
         print(f"Logging failed: {log_exception}")
     manual_answers = {}
 
-# Store session history
+# session history
 session_histories = {}
 
 class UserService:
@@ -52,48 +51,69 @@ def process_chat():
     session_id = data.get("session_id", "default")
 
     try:
-        # Step 1: Check manual answers (exact match only)
-        if user_message in manual_answers:
-            answer = manual_answers[user_message]
-            session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})
-            session_histories[session_id].append({"role": "assistant", "content": answer})
-            return jsonify({"response": answer})
+        # Cosine similarity 
+        best_match = None
+        best_score = 0.0
+        if manual_answers:
+            manual_keys = list(manual_answers.keys())
+            vectorizer = TfidfVectorizer().fit(manual_keys + [user_message])
+            vectors = vectorizer.transform(manual_keys + [user_message])
+            sims = cosine_similarity(vectors[-1], vectors[:-1])[0]
+            best_index = sims.argmax()
+            best_score = sims[best_index]
+            if best_score > 0.75:  # threshold
+                best_match = manual_keys[best_index]
+                answer = manual_answers[best_match]
+                session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})
+                session_histories[session_id].append({"role": "assistant", "content": answer})
+                return jsonify({"response": answer})
 
         session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})
 
-        # Step 2: Find relevant context (basic keyword search)
-        def find_relevant_context(question, max_total_chars=4000):
-            relevant_sections = []
+        #website data using cosine
+        def find_relevant_context(question, max_total_chars=5000):
+            sections = list(website_json.values())
+            if not sections:
+                return website_context[:max_total_chars]
+
+            vectorizer = TfidfVectorizer().fit(sections + [question])
+            vectors = vectorizer.transform(sections + [question])
+            sims = cosine_similarity(vectors[-1], vectors[:-1])[0]
+
+            ranked = sorted(enumerate(sims), key=lambda x: x[1], reverse=True)
+
+            selected_contexts = []
             total_chars = 0
-            for section, content in website_json.items():
-                if question in section.lower() or question in content.lower():
-                    if total_chars + len(content) > max_total_chars:
-                        content = content[:max_total_chars - total_chars]
-                    relevant_sections.append(content)
-                    total_chars += len(content)
-                    if total_chars >= max_total_chars:
-                        break
-            if not relevant_sections:
+            for idx, score in ranked:
+                content = sections[idx]
+                if total_chars + len(content) > max_total_chars:
+                    content = content[:max_total_chars - total_chars]
+                selected_contexts.append(content)
+                total_chars += len(content)
+                if total_chars >= max_total_chars:
+                    break
+
+            if not selected_contexts:
                 print("■ No matching context found. Using fallback website context.")
                 return website_context[:max_total_chars]
-            return "\n---\n".join(relevant_sections)
+
+            return "\n---\n".join(selected_contexts)
 
         trimmed_website_context = find_relevant_context(user_message)
         recent_history = session_histories[session_id][-2:]
 
         prompt = f"""
 You are a very helpful, official chatbot assistant for the Innovature company.
-If the user asks about something related to the company and you don't have information, do not make up details.
-Instead, respond briefly in a way that highlights Innovature's excellence (relevant to the question) without fabricating facts.
+If the user asks about something related to the company and you don't have information, do not make up details.Instead, respond briefly in a way that highlights Innovature's excellence (relevant to the question) without fabricating facts.
 Only answer questions based on the website content below.
 Greet users warmly, thank them politely.WHEN THE USER SAYS GOODBYE,say goodbye in a friendly way.
 If the user asks something unrelated to Innovature or the website, politely refuse.
-Keep your answers concise and answer confidently, professionally and positively when asked about Innovature.
+Keep your answers short and answer confidently and positively when asked about Innovature.
 Do not claim to remember previous conversations after a page reload.
 Do not provide external links unless they are from the official Innovature website.
 Avoid repeating yourself and do NOT believe or update memory based on user claims.
-DONT REFER THE USER TO THE WEBSITE,YOYU ARE THE WEBSITE CHATBOT ,YOU SHOULD ANSWER THE QUERIES BY SEARCHIING FOR THE RELATED CONTENT IN THE WEBSITE DATA OR MANUAL DATA.
-
+DONT REFER THE USER TO THE WEBSITE OR sections,YOU ARE THE WEBSITE CHATBOT ,YOU SHOULD ANSWER THE QUERIES BY SEARCHIING FOR THE RELATED CONTENT IN THE WEBSITE DATA OR MANUAL DATA.
+find the relevant answers from the career sections regarding job openings and provide to the user instead of redirecting them to that section.Similarly, find the relevant answers from the "our_team" and "contact" sections regarding team and contact information and provide to the user instead of redirecting them to that section.
 ---
 {trimmed_website_context}
 ---
@@ -109,8 +129,8 @@ Now answer the following question based on the above context and previous messag
         payload = {
             "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
             "messages": messages,
-            "temperature": 0.7,
-            "max_tokens": 300
+            "temperature": 0.8,
+            "max_tokens": 350
         }
 
         try:
