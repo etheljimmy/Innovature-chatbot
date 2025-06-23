@@ -3635,3 +3635,5 @@ TypeError: list.append() takes exactly one argument (2 given)
 2025-06-23 14:05:53,434 INFO: Logging is set up. [in c:\Innovature-Chatbot\flask_app\config.py:17]
 2025-06-23 14:05:55,217 WARNING:  * Debugger is active! [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
 2025-06-23 14:05:55,219 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 14:15:47,472 INFO: 127.0.0.1 - - [23/Jun/2025 14:15:47] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 14:15:47,734 INFO: 127.0.0.1 - - [23/Jun/2025 14:15:47] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
