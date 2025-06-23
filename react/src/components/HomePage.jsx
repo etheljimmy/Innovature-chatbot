@@ -32,12 +32,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Chat Button */}
+      {/*Button*/}
       <button onClick={toggleChatbot} className="chat-toggle-btn">
         Chat
       </button>
 
-      {/* Chatbot (floating) */}
+      {/*floating */}
       {showChatbot && (
         <div className="chatbot-container">
           <Chatbot

@@ -1,7 +1,5 @@
 # Flask App
-
 This is a Flask application following a modular structure with best practices.
-
 ## Structure
 - `run.py`: Application entry point
 - `config.py`: Configuration settings
