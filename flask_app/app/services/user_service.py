@@ -25,7 +25,7 @@ except Exception as e:
 #manual
 try:
     manual_answers_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../manual_answers.json'))
-    with open(manual_answers_path, 'r', encoding='utf-8') as f:
+    with open(manual_answers_path,'r',encoding='utf-8') as f:
         manual_answers = json.load(f)
 except Exception as e:
     try:
@@ -42,8 +42,7 @@ def process_chat():
     data = request.get_json()
     user_message = data.get("message", "").strip().lower()
     session_id = data.get("session_id", "default")
-    try:
-        #Cosine similarity 
+    try:#Cosine similarity 
         best_match = None
         best_score = 0.0
         if manual_answers:
@@ -53,7 +52,7 @@ def process_chat():
             sims = cosine_similarity(vectors[-1], vectors[:-1])[0]
             best_index = sims.argmax()
             best_score = sims[best_index]
-            if best_score > 0.75:  # threshold
+            if best_score > 0.75:  #threshold
                 best_match = manual_keys[best_index]
                 answer = manual_answers[best_match]
                 session_histories.setdefault(session_id, []).append({"role": "user", "content": user_message})

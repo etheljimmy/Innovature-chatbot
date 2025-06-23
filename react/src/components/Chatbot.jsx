@@ -39,8 +39,8 @@ const Chatbot = () => {
   useEffect(() => {//historysavee
     sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
   }, [chatHistory]);
-  useEffect(() => {//scroll to bottom auto
-    if (chatEndRef.current) {
+  useEffect(() => {
+    if (chatEndRef.current) {//scroll to bottom auto
       chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [chatHistory, typing]);
@@ -89,5 +89,4 @@ const Chatbot = () => {
     </div>
   );
 };
-
 export default Chatbot;
