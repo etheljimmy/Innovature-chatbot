@@ -3565,3 +3565,8 @@ TypeError: list.append() takes exactly one argument (2 given)
 2025-06-23 12:35:58,880 INFO: 127.0.0.1 - - [23/Jun/2025 12:35:58] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
 2025-06-23 12:36:12,037 INFO: 127.0.0.1 - - [23/Jun/2025 12:36:12] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
 2025-06-23 12:37:11,207 INFO: 127.0.0.1 - - [23/Jun/2025 12:37:11] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 12:37:17,183 INFO: 127.0.0.1 - - [23/Jun/2025 12:37:17] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 12:37:23,135 INFO: 127.0.0.1 - - [23/Jun/2025 12:37:23] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 12:37:28,919 INFO: 127.0.0.1 - - [23/Jun/2025 12:37:28] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 12:37:39,078 INFO: 127.0.0.1 - - [23/Jun/2025 12:37:39] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-23 12:37:47,450 INFO: 127.0.0.1 - - [23/Jun/2025 12:37:47] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
