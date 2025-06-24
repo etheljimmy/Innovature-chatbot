@@ -3637,3 +3637,299 @@ TypeError: list.append() takes exactly one argument (2 given)
 2025-06-23 14:05:55,219 INFO:  * Debugger PIN: 611-886-541 [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
 2025-06-23 14:15:47,472 INFO: 127.0.0.1 - - [23/Jun/2025 14:15:47] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
 2025-06-23 14:15:47,734 INFO: 127.0.0.1 - - [23/Jun/2025 14:15:47] "POST /chat HTTP/1.1" 200 - [in C:\Innovature-Chatbot\.venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:27:22,734 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:28:29,203 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:28:41,891 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:29:13,719 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:29:18,284 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:29:18,284 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:29:18,299 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:29:19,240 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:29:21,060 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:29:21,062 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:29:59,404 INFO: 127.0.0.1 - - [24/Jun/2025 09:29:59] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:30:06,603 INFO: 127.0.0.1 - - [24/Jun/2025 09:30:06] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:30:21,058 INFO: 127.0.0.1 - - [24/Jun/2025 09:30:21] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:30:27,215 INFO: 127.0.0.1 - - [24/Jun/2025 09:30:27] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:30:40,685 INFO: 127.0.0.1 - - [24/Jun/2025 09:30:40] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:30:47,660 INFO: 127.0.0.1 - - [24/Jun/2025 09:30:47] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:30:59,381 INFO: 127.0.0.1 - - [24/Jun/2025 09:30:59] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:31:07,187 INFO: 127.0.0.1 - - [24/Jun/2025 09:31:07] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:31:10,549 INFO: 127.0.0.1 - - [24/Jun/2025 09:31:10] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:31:16,012 INFO: 127.0.0.1 - - [24/Jun/2025 09:31:16] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:31:34,268 INFO: 127.0.0.1 - - [24/Jun/2025 09:31:34] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:31:50,775 INFO: 127.0.0.1 - - [24/Jun/2025 09:31:50] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:32:03,660 INFO: 127.0.0.1 - - [24/Jun/2025 09:32:03] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:32:13,687 INFO: 127.0.0.1 - - [24/Jun/2025 09:32:13] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:32:28,332 INFO: 127.0.0.1 - - [24/Jun/2025 09:32:28] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:32:40,278 INFO: 127.0.0.1 - - [24/Jun/2025 09:32:40] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:32:48,611 INFO: 127.0.0.1 - - [24/Jun/2025 09:32:48] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:32:58,703 INFO: 127.0.0.1 - - [24/Jun/2025 09:32:58] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:09,027 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:09] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:18,535 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:18] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:24,699 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:24] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:29,385 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:29] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:30,916 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:33:31,727 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:33:33,327 ERROR: API retry error429:{
+  "id": "nzMhz57-4Yz4kd-954956572a677e81",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:33:33,328 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:33] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:33,605 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:33] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:34,038 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:34] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:34,608 ERROR: API retry error429:{
+  "id": "nzMhzTn-3NKUce-9549565c5900398f",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:33:34,609 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:34] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:37,772 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:33:39,725 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:33:41,338 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:41] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:33:43,478 INFO: 127.0.0.1 - - [24/Jun/2025 09:33:43] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:37:27,896 INFO:  * Detected change in 'c:\\Innovature-Chatbot OG\\flask_app\\app\\services\\user_service.py', reloading [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:37:28,152 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:37:29,199 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:37:31,093 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:37:31,095 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:38:51,358 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:38:53,106 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:38:53,106 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:38:53,108 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:38:53,946 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:38:55,764 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:38:55,766 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:02,255 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:02] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:08,964 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:08] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:09,950 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:39:10,303 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:10] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:11,105 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:11] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:11,312 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:39:12,361 ERROR: API retry error429:{
+  "id": "nzMjira-4Yz4kd-95495e9e3a64ca8c",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:39:12,362 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:12] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:12,560 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:39:13,755 ERROR: API retry error429:{
+  "id": "nzMjjGJ-4Yz4kd-95495ea6ced57fc8",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:39:13,756 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:13] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:14,963 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:39:15,696 ERROR: API retry error429:{
+  "id": "nzMjjqx-4Yz4kd-95495eae8eab7f4a",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:39:15,697 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:15] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:39:17,523 ERROR: API retry error429:{
+  "id": "nzMjkQ5-3NKUce-95495ebd789f7f5b",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:39:17,525 INFO: 127.0.0.1 - - [24/Jun/2025 09:39:17] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:41,123 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:41:42,998 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:42,998 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:43,000 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:43,871 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:41:45,628 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:45,630 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:46,532 INFO: 127.0.0.1 - - [24/Jun/2025 09:41:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:41:54,953 INFO: 127.0.0.1 - - [24/Jun/2025 09:41:54] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:42:38,299 INFO: 127.0.0.1 - - [24/Jun/2025 09:42:38] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:42:51,088 INFO: 127.0.0.1 - - [24/Jun/2025 09:42:51] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:42:52,237 INFO: 127.0.0.1 - - [24/Jun/2025 09:42:52] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:43:01,662 INFO: 127.0.0.1 - - [24/Jun/2025 09:43:01] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:44:48,502 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:44:50,372 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:44:50,372 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:44:50,374 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:44:51,186 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:44:53,019 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:44:53,022 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:44:57,906 INFO: 127.0.0.1 - - [24/Jun/2025 09:44:57] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:07,682 INFO: 127.0.0.1 - - [24/Jun/2025 09:45:07] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:09,907 INFO: 127.0.0.1 - - [24/Jun/2025 09:45:09] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:19,411 INFO:  * Detected change in 'c:\\Innovature-Chatbot OG\\flask_app\\app\\services\\user_service.py', reloading [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:19,627 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:20,401 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:45:22,177 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:22,179 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:25,235 INFO:  * Detected change in 'c:\\Innovature-Chatbot OG\\flask_app\\app\\services\\user_service.py', reloading [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:25,502 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:26,318 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:45:28,591 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:28,594 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:33,678 INFO:  * Detected change in 'c:\\Innovature-Chatbot OG\\flask_app\\app\\services\\user_service.py', reloading [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:33,896 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:34,718 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:45:36,473 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:36,475 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:53,708 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:45:55,454 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:55,454 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:55,456 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:56,228 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:45:57,887 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:45:57,889 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:46:29,585 INFO: 127.0.0.1 - - [24/Jun/2025 09:46:29] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:46:35,718 INFO: 127.0.0.1 - - [24/Jun/2025 09:46:35] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:46:37,777 INFO: 127.0.0.1 - - [24/Jun/2025 09:46:37] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:46:42,782 INFO: 127.0.0.1 - - [24/Jun/2025 09:46:42] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:46:46,040 INFO: 127.0.0.1 - - [24/Jun/2025 09:46:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:46:48,796 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:46:54,536 INFO: 127.0.0.1 - - [24/Jun/2025 09:46:54] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:47:07,584 INFO: 127.0.0.1 - - [24/Jun/2025 09:47:07] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:47:18,140 INFO: 127.0.0.1 - - [24/Jun/2025 09:47:18] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:47:57,295 INFO: 127.0.0.1 - - [24/Jun/2025 09:47:57] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:03,330 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:03] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:04,087 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:04] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:08,386 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:08] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:09,975 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:09] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:24,307 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:24] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:26,327 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:26] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:40,388 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:40] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:41,286 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:41] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:49,427 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:49] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:48:49,982 INFO: 127.0.0.1 - - [24/Jun/2025 09:48:49] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:49:06,872 INFO: 127.0.0.1 - - [24/Jun/2025 09:49:06] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:49:28,670 INFO: 127.0.0.1 - - [24/Jun/2025 09:49:28] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:49:41,383 INFO: 127.0.0.1 - - [24/Jun/2025 09:49:41] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:49:41,822 INFO: 127.0.0.1 - - [24/Jun/2025 09:49:41] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:49:53,760 INFO: 127.0.0.1 - - [24/Jun/2025 09:49:53] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:50:09,023 INFO:  * Detected change in 'c:\\Innovature-Chatbot OG\\flask_app\\app\\services\\user_service.py', reloading [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:50:09,270 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:50:10,256 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:50:12,009 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:50:12,011 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:50:12,027 INFO: 127.0.0.1 - - [24/Jun/2025 09:50:12] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:50:23,978 INFO: 127.0.0.1 - - [24/Jun/2025 09:50:23] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:52:01,190 INFO: 127.0.0.1 - - [24/Jun/2025 09:52:01] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:52:09,652 INFO: 127.0.0.1 - - [24/Jun/2025 09:52:09] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:52:32,493 INFO: 127.0.0.1 - - [24/Jun/2025 09:52:32] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:52:48,842 INFO: 127.0.0.1 - - [24/Jun/2025 09:52:48] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:52:53,188 INFO: 127.0.0.1 - - [24/Jun/2025 09:52:53] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:04,905 INFO: 127.0.0.1 - - [24/Jun/2025 09:53:04] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:35,673 INFO:  * Detected change in 'c:\\Innovature-Chatbot OG\\flask_app\\app\\services\\user_service.py', reloading [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:35,895 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:36,805 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:53:38,755 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:38,757 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:42,740 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:53:44,491 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:44,491 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:44,493 INFO:  * Restarting with stat [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:45,296 INFO: Logging is set up. [in c:\Innovature-Chatbot OG\flask_app\config.py:17]
+2025-06-24 09:53:46,970 WARNING:  * Debugger is active! [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:53:46,972 INFO:  * Debugger PIN: 797-989-890 [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:54:52,681 INFO: 127.0.0.1 - - [24/Jun/2025 09:54:52] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:54:58,510 INFO: 127.0.0.1 - - [24/Jun/2025 09:54:58] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:55:27,449 INFO: 127.0.0.1 - - [24/Jun/2025 09:55:27] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:55:31,959 INFO: 127.0.0.1 - - [24/Jun/2025 09:55:31] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:55:48,209 INFO: 127.0.0.1 - - [24/Jun/2025 09:55:48] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:55:52,741 INFO: 127.0.0.1 - - [24/Jun/2025 09:55:52] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:56:12,874 INFO: 127.0.0.1 - - [24/Jun/2025 09:56:12] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:56:16,950 INFO: 127.0.0.1 - - [24/Jun/2025 09:56:16] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:33,106 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:33] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:40,297 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:40] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:41,152 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:41] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:47,131 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:47] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:47,631 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:47] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:50,434 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:57:55,624 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:55] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:57:56,087 INFO: 127.0.0.1 - - [24/Jun/2025 09:57:56] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:02,486 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:02] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:02,959 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:02] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:08,758 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:08] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:09,559 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:09] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:12,326 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 09:58:14,704 ERROR: API retry error429:{
+  "id": "nzMqaRw-4Yz4kd-95497a81f9297fe6",
+  "error": {
+    "message": "You have reached the rate limit specific to this model meta-llama/Llama-3.3-70B-Instruct-Turbo-Free. The maximum rate limit for this model is 6.0 queries and 180000000 tokens per minute. This limit differs from the general rate limits published at Together AI rate limits documentation (https://docs.together.ai/docs/rate-limits). For inquiries about increasing your model-specific rate limit, please contact our sales team (https://www.together.ai/forms/contact-sales)",
+    "type": "model_rate_limit",
+    "param": null,
+    "code": null
+  }
+} [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:126]
+2025-06-24 09:58:14,706 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:14] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:16,847 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:16] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 09:58:27,959 INFO: 127.0.0.1 - - [24/Jun/2025 09:58:27] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:06:02,963 INFO: 127.0.0.1 - - [24/Jun/2025 10:06:02] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:06:09,056 INFO: 127.0.0.1 - - [24/Jun/2025 10:06:09] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:07:36,511 INFO: 127.0.0.1 - - [24/Jun/2025 10:07:36] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:07:42,045 INFO: 127.0.0.1 - - [24/Jun/2025 10:07:42] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:07:46,992 INFO: 127.0.0.1 - - [24/Jun/2025 10:07:46] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:07:57,658 INFO: 127.0.0.1 - - [24/Jun/2025 10:07:57] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:08:22,888 INFO: 127.0.0.1 - - [24/Jun/2025 10:08:22] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:08:33,582 INFO: 127.0.0.1 - - [24/Jun/2025 10:08:33] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:09:11,159 INFO: 127.0.0.1 - - [24/Jun/2025 10:09:11] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:09:15,811 INFO: 127.0.0.1 - - [24/Jun/2025 10:09:15] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:15,670 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:15] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:15,953 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:15] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:33,678 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:33] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:33,990 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:33] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:39,636 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:39] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:43,179 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:43] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:48,884 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:48] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:11:53,028 INFO: 127.0.0.1 - - [24/Jun/2025 10:11:53] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:12:05,788 INFO: 127.0.0.1 - - [24/Jun/2025 10:12:05] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:12:09,772 INFO: 127.0.0.1 - - [24/Jun/2025 10:12:09] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:12:34,868 INFO: 127.0.0.1 - - [24/Jun/2025 10:12:34] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:12:39,169 INFO: 127.0.0.1 - - [24/Jun/2025 10:12:39] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:12:43,558 INFO: 127.0.0.1 - - [24/Jun/2025 10:12:43] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:12:46,394 WARNING: Rate limit hit(429).Retrying in 2s................ [in c:\Innovature-Chatbot OG\flask_app\app\services\user_service.py:120]
+2025-06-24 10:12:49,540 INFO: 127.0.0.1 - - [24/Jun/2025 10:12:49] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:13:12,621 INFO: 127.0.0.1 - - [24/Jun/2025 10:13:12] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:13:18,312 INFO: 127.0.0.1 - - [24/Jun/2025 10:13:18] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:15:02,290 INFO: 127.0.0.1 - - [24/Jun/2025 10:15:02] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:15:06,297 INFO: 127.0.0.1 - - [24/Jun/2025 10:15:06] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:26:03,701 INFO: 127.0.0.1 - - [24/Jun/2025 10:26:03] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:26:16,115 INFO: 127.0.0.1 - - [24/Jun/2025 10:26:16] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:26:58,561 INFO: 127.0.0.1 - - [24/Jun/2025 10:26:58] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:27:04,510 INFO: 127.0.0.1 - - [24/Jun/2025 10:27:04] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:27:22,720 INFO: 127.0.0.1 - - [24/Jun/2025 10:27:22] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:27:29,564 INFO: 127.0.0.1 - - [24/Jun/2025 10:27:29] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:27:41,624 INFO: 127.0.0.1 - - [24/Jun/2025 10:27:41] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:27:53,358 INFO: 127.0.0.1 - - [24/Jun/2025 10:27:53] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:27:57,040 INFO: 127.0.0.1 - - [24/Jun/2025 10:27:57] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:28:03,281 INFO: 127.0.0.1 - - [24/Jun/2025 10:28:03] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:28:19,088 INFO: 127.0.0.1 - - [24/Jun/2025 10:28:19] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 10:28:27,582 INFO: 127.0.0.1 - - [24/Jun/2025 10:28:27] "POST /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]
+2025-06-24 12:34:26,168 INFO: 127.0.0.1 - - [24/Jun/2025 12:34:26] "OPTIONS /chat HTTP/1.1" 200 - [in C:\Users\Ethel Jimmy\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:97]

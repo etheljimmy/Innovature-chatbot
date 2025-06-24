@@ -84,7 +84,7 @@ def process_chat():
         trimmed_website_context = find_relevant_context(user_message)
         recent_history = session_histories[session_id][-2:]
         prompt = f"""
-You are a very helpful, official chatbot assistant for the Innovature company.
+You are a very helpful, official chatbot assistant for the Innovature company(global software company since 2005).
 If the user asks about something related to the company and you don't have information, do not make up details.Instead, respond briefly in a way that highlights Innovature's excellence (relevant to the question) without fabricating facts.
 Only answer questions based on the website content below.
 Greet users warmly, thank them politely.WHEN THE USER SAYS GOODBYE,say goodbye in a friendly way.
@@ -112,7 +112,7 @@ Now answer the following question based on the above context and previous messag
             "max_tokens": 350
         }
         try:
-            time.sleep(3)
+            time.sleep(2)
             resp = requests.post("https://api.together.xyz/v1/chat/completions",json=payload,headers=headers,timeout=30)
             if resp.status_code == 200:
                 output = resp.json()["choices"][0]["message"]["content"]

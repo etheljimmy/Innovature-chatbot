@@ -3,6 +3,7 @@ import './Chatbot.css';
 import { sendMessageToBot } from '../services/chatbotService';
 const Chatbot = () => {
   const chatEndRef = useRef(null);//scroll to bottom after each msg
+  
   //Cookiehelpers
   function getCookie(name) {
     const cookieArr = document.cookie.split('; ');
@@ -34,7 +35,19 @@ const Chatbot = () => {
     const saved = sessionStorage.getItem('chatHistory');
     return saved ? JSON.parse(saved) : [];
   });
+
+
+
   const [typing, setTyping] = useState(false);//typingbot
+  const inputRef = useRef(null);
+useEffect(() => {
+  if (!typing && inputRef.current) {
+    inputRef.current.focus();
+  }
+}, [typing]);
+
+
+
   const [input, setInput] = useState('');
   useEffect(() => {//historysavee
     sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
@@ -79,12 +92,16 @@ const Chatbot = () => {
       </div>
       <form className="inputArea" onSubmit={handleSubmit}>
         <input
+          ref={inputRef}
           className="inputBox"
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Type a message..."
+          disabled={typing} 
+          
         />
-        <button className="sendButton" type="submit">Send</button>
+        <button className="sendButton" type="submit"disabled={typing}
+        >Send</button>
       </form>
     </div>
   );
