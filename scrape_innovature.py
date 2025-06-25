@@ -40,7 +40,7 @@ if os.path.exists("website_data.json"):
 
 os.makedirs("scraped_pages", exist_ok=True)
 
-#  Scrape and save .txt
+#Scrape andsave 
 for name, url in pages.items():
     try:
         print(f"Scraping {url}")
@@ -52,7 +52,7 @@ for name, url in pages.items():
     except Exception as e:
         print(f"Failed to scrape {url}: {e}")
 
-#  Convert txt files to structured JSON
+#Convert txt jSON
 json_data = {}
 for filename in os.listdir("scraped_pages"):
     if filename.endswith(".txt"):
@@ -60,7 +60,7 @@ for filename in os.listdir("scraped_pages"):
         with open(f"scraped_pages/{filename}", "r", encoding="utf-8") as f:
             json_data[key] = f.read()
 
-#  Preserve existing manual data in website_data.json
+#existing manual
 existing_path = "website_data.json"
 if os.path.exists(existing_path):
     with open(existing_path, "r", encoding="utf-8") as f:
@@ -68,7 +68,7 @@ if os.path.exists(existing_path):
     existing_data.update(json_data)
     json_data = existing_data
 
-# Save as JSON
+#SaveJSON
 with open("website_data.json", "w", encoding="utf-8") as f:
     json.dump(json_data, f, indent=2, ensure_ascii=False)
 

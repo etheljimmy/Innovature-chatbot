@@ -2,3 +2,7 @@ Flask
 Flask-SQLAlchemy
 python-dotenv
 flask-cors
+scikit-learn
+beautifulsoup4(for scraping(bs4))
+requests    
+

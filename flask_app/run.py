@@ -1,5 +1,5 @@
-# Application entry point
-if __name__ == "__main__":
+#App entry 
+if __name__=="__main__":
     from app import create_app
-    app = create_app()
+    app=create_app()
     app.run(debug=True)
